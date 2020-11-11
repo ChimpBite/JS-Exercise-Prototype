@@ -120,22 +120,24 @@ function Baby(name, age, favoriteToy) {
 }
 
 Baby.prototype = Object.create(Person.prototype);
-Baby.prototype.Play = function () {
+Baby.prototype.play = function () {
   return `Playing with ${this.favoriteToy}.`;
 };
 
 const baby = new Baby("Sam", 3, "Cars");
 
-console.log(baby.Play());
+baby.play();
+
+console.log(baby.play());
 
 /* 
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Window Binding = default, get this if you don't have 'This'
+  2. Implicit Binding = most common, looks for left of dot
+  3. Explicit Binding = .Call, .Bind, .Apply
+  4. New Binding = 'new' keyword to construct a new object
 */
 
 ///////// END OF CHALLENGE /////////
